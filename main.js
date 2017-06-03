@@ -10,7 +10,7 @@ electron_1.app.on('window-all-closed', function () {
 electron_1.app.on('ready', function () {
     mainWindow = new electron_1.BrowserWindow({
         width: 800,
-        height: 600
+        height: 500
     });
     mainWindow.loadURL(`file://${__dirname}/index.html`);
     mainWindow.on('closed', function () {
