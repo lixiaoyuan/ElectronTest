@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
+  "license": "CC0-1.0",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build":"tsc"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -14,9 +16,8 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "~1.6.2"
+  "dependencies": {
+    "electron": "^1.6.10",
+    "typescript": "^2.3.4"
   }
 }
