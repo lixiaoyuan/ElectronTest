@@ -1,12 +1,15 @@
 {
-  "name": "electron-quick-start",
+  "name": "TsElectron",
+  "productName": "TsElectron",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "license": "CC0-1.0",
   "scripts": {
     "start": "electron .",
-    "build":"tsc"
+    "build": "tsc",
+    "prepublish":"electron-packager ./ --icon=8.ico --ignore=.vscode --ignore=node_modules --overwrite",
+    "package":"electron-installer-squirrel-windows ./TsElectron-win32-x64 --authors=lixiaoyuan --out=./install --overwrite --description=说明 --appversion=1.0.2.5 --setup_icon=8.ico"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,7 +20,13 @@
     "demo"
   ],
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "electron": "^1.6.10",
+    "jquery": "^3.2.1",
     "typescript": "^2.3.4"
+  },
+  "devDependencies": {
+    "electron-installer-squirrel-windows": "^1.3.0",
+    "electron-packager": "^8.7.0"
   }
 }
